@@ -4,7 +4,7 @@
 Плагин добавляет в IDE новое действие, которое вызывает диалоговое окно c сообщением "Hello World!".
 Ссылка для загрузки плагина в формате ZIP (для установки в IntelliJ IDEA):
 https://drive.google.com/file/d/1C6y2BYyQ1fkufdolTuyNxtqNTBe0CTaK/view?usp=sharing
-## Код и коментарии к нему
+## Код и коментарии к плагину
 ### plugin.xml
 ```
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
