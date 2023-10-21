@@ -1,0 +1,43 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.github.kirillpash.helloworldplugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Hello World! Plugin</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="409317@niuitmo.ru" url="https://www.github.com/kirillpash">KirillPash</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    <h1>Shows Hello World! message</h1>
+    <p>developed by KirillPash</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Smiley.svg/langru-200px-Smiley.svg.png">
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+        <!-- Объявление действия HelloWorld из класса HelloWorld, которое добавляет действие "Show "Hello World!" в
+         раздел инструментов (Tools). Действие активируется нажатием на него в панели либо сочетанием
+         Ctrl + Alt + 1 и выводит на экран диалоговое окно с заголовком и сообщением-->
+    </extensions>
+    <actions>
+        <action id="HelloWorld" class="HelloWorld" text="Show &quot;Hello World!&quot;"
+                description="Just greets the world, including you">
+            <keyboard-shortcut
+                    keymap="$default"
+                    first-keystroke="control alt 1"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
